@@ -1,0 +1,24 @@
+{
+  "name": "ravenfree-ts-validator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravenfree697/raven-ts-validator.git"
+  },
+  "author": "Lukas Bares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravenfree697/ravenfree-ts-validator/issues"
+  },
+  "homepage": "https://github.com/ravenfree697/ravenfree-ts-validator#readme"
+}

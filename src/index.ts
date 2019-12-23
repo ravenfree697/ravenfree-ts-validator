@@ -2,12 +2,12 @@
 export default class ModelValidator<V> {
 
     private model: V;
-    private validationStatus: boolean;
+    private isValidStatus: boolean;
     private errorMessage?: string
 
     constructor(model: V) {
         this.model = model
-        this.validationStatus = true
+        this.isValidStatus = true
         this.errorMessage = 'No Error'
     }
 
@@ -16,12 +16,12 @@ export default class ModelValidator<V> {
             this.errorMessage = message
     }
 
-    private setInvalidStatus = () => this.validationStatus = false
+    private setInvalidStatus = () => this.isValidStatus = false
 
-    private modelIsUnvalid = () => this.validationStatus === false
+    private modelIsUnvalid = () => this.isValidStatus === false
 
     /** Return final validation status */
-    tellMeValidationStatus = () => { return { status: this.validationStatus } }
+    tellMeValidationStatus = () => { return { status: this.isValidStatus } }
 
     /** Return error message of the first error kind */
     whereIsTheProblem = () => this.errorMessage
@@ -32,7 +32,7 @@ export default class ModelValidator<V> {
             return this
 
         const selectResult = selector(this.model)
-        this.validationStatus = selectResult !== null
+        this.isValidStatus = selectResult !== null
 
         this.setErrorMessage(`Validation Error: ${selectResult} is NULL`)
         return this
@@ -45,7 +45,7 @@ export default class ModelValidator<V> {
             return this
 
         const selectResult = selector(this.model)
-        this.validationStatus = selectResult !== undefined
+        this.isValidStatus = selectResult !== undefined
 
         this.setErrorMessage(`Validation Error: ${selectResult} is UNDEFINED`)
         return this
@@ -57,7 +57,7 @@ export default class ModelValidator<V> {
             return this
 
         const selectResult = selector(this.model)
-        this.validationStatus = (selectResult !== undefined) && (selectResult !== null)
+        this.isValidStatus = (selectResult !== undefined) && (selectResult !== null)
 
         this.setErrorMessage(`Validation Error: ${selectResult} is UNDEFINED or NULL`)
 
@@ -71,7 +71,7 @@ export default class ModelValidator<V> {
 
         const selectResult = selector(this.model)
         const isHigherCondition = condition === 'Larger than'
-        this.validationStatus = isHigherCondition ? selectResult > value : selectResult < value
+        this.isValidStatus = isHigherCondition ? selectResult > value : selectResult < value
 
         this.setErrorMessage(`Validation Error: ${selectResult} is ${(() => isHigherCondition ? 'smaller' : 'larger')()} than ${value}`)
         return this

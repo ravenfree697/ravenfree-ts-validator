@@ -1,7 +1,7 @@
 {
   "name": "ravenfree-ts-validator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Functional validation for typescript models. [pre-alpha]",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {},
@@ -9,6 +9,7 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

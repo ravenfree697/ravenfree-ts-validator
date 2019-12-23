@@ -1,10 +1,10 @@
 {
   "name": "ravenfree-ts-validator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validation for typescript models. [pre-alpha]",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files":[
+  "files": [
     "dist/**/*"
   ],
   "dependencies": {},

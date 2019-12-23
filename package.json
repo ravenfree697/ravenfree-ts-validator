@@ -1,7 +1,7 @@
 {
   "name": "ravenfree-ts-validator",
   "version": "1.0.0",
-  "description": "Functional validation for typescript models. [pre-alpha]",
+  "description": "Validation for typescript models. [pre-alpha]",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {},

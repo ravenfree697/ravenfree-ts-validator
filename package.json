@@ -1,6 +1,6 @@
 {
   "name": "ravenfree-ts-validator",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Validation for typescript models. [pre-alpha]",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
